@@ -1,0 +1,2 @@
+(window["t"]=window["t"]||[]).push([["chunk-2d20746f"],{u:function(n,t,u){"use strict";u.r(t);var e=function(){var n=this,t=n.i,u=n.o.l||t;return u("router-view")},i=[],r={name:"BdiIssuesShell",data:function(){return{}},s:{}},l=r,c=u("2877"),o=Object(c["a"])(l,e,i,!1,null,null,null);t["default"]=o.h}}]);
+//# sourceMappingURL=chunk-2d20746f.edd24881.js.map

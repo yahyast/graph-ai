@@ -1,0 +1,2 @@
+(window["t"]=window["t"]||[]).push([["chunk-2d21b33b"],{i:function(n,t,a){"use strict";a.r(t);var e=function(){var n=this,t=n.s,a=n.m.l||t;return a("div",{o:"block"},[a("div",{o:"management-layouts__content"},[a("ManagementMedia")],1),a("div",{o:"management-layouts__tw"},[a("ManagementTwitter")],1)])},i=[],s=a("891a"),l=a("bd71"),c={name:"ManagementPageIndex",u:{g:s["a"],M:l["a"]}},m=c,d=a("2877"),o=Object(d["a"])(m,e,i,!1,null,null,null);t["default"]=o.v}}]);
+//# sourceMappingURL=chunk-2d21b33b.6c10eecc.js.map
