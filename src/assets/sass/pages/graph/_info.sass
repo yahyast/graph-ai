@@ -1,0 +1,99 @@
+
+.box-info-graph
+    &__header
+        padding: 16px
+        box-shadow: rgb(0 0 0 / 11%) 0px 4px 25px
+        background-color: var(--bg-sidebar)
+        display: block
+    &__body
+        padding: 16px 16px 0px
+
+
+.box-chart-info
+    @apply border rounded p-2
+    @extend .card-bg-theme
+    border-color: var(--border-theme)
+
+
+.info-area
+    &__header
+        text-align: center
+        font-weight: 700
+        font-size: 18px
+        padding-bottom: 11px
+        margin-bottom: 11px
+        border-bottom: 1px solid rgb(0, 0, 0)
+        strong
+            font-size: 22px
+            display: block
+            color: rgb(0, 117, 255)
+    &__graph
+        text-align: center
+        .component-dynamics
+            &__header
+                @apply flex-col text-sm
+                .dynamics-title
+                    @apply block mb-1
+
+
+.sources
+    &__item
+        .box-source
+            &__header
+                color: var(--color-primary-500)
+                cursor: pointer
+                padding: 12px 0px
+                display: flex
+                align-items: center
+                justify-content: space-between
+                border: none
+                outline: none
+                transition: background-color 0.6s ease 0s
+                font-size: 13px
+                width: 100%
+                .arrow
+                    color: rgb(100 100 100)
+                    transform: rotate(-180deg)
+                    transition: all 0.3s ease
+            &__body
+                transition: max-height 0.6s ease 0s
+                overflow: hidden
+                font-weight: 600
+                font-size: 14px
+                line-height: 21px
+                max-height: 0px
+        &--opened
+            .box-source
+                &__header
+                    .arrow
+                        transform: rotate(0deg)
+
+                &__body
+                    transition: max-height 0.6s ease 0s
+                    max-height: 50vh
+                    overflow: auto
+
+.box-related
+    margin-bottom: 15px
+    &__header
+        display: block
+        font-size: 18px
+        margin-bottom: 12px
+        color: rgb(15, 17, 20)
+        font-weight: 700
+        width: 100%
+    &__body
+        @apply grid grid-cols-2 gap-2 w-full
+        .btn-related
+            width: 100%
+            button
+                height: 40px
+                padding: 12px !important
+
+.btn-related
+    button
+        height: 40px
+        @apply justify-start
+
+.btn-read
+    display: inline-block

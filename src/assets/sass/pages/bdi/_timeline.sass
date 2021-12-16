@@ -1,0 +1,45 @@
+.container-timeline
+    @apply border mt-8 rounded
+    border-color: var(--border-theme-darkness)
+    height: 449px
+
+.box-timeline
+    height: 449px
+    @apply overflow-auto
+
+    .timeline
+        @apply flex items-center relative
+        &__time
+            flex: 0 0 180px
+            max-width: 180px
+            padding-right: 32px
+            @apply text-right w-full
+            span
+                font-size: 12px
+                font-weight: 700
+
+        &__content
+            @apply flex-grow relative py-2 pr-4 pl-0
+            &::before
+                content: ''
+                width: 1px
+                height: 100%
+                left: -10px
+                @apply absolute top-0 border 
+                border-color: var(--border-theme-darkness)
+            &::after
+                content: ''
+                width: 15px
+                height: 15px
+                border-radius: 100px
+                background-color: var(--bg-card)
+                position: absolute
+                top: 50%
+                transform: translateY(-50%)
+                left: -17px
+                box-shadow: inset 0px 0px 0px 2px var(--color-primary-700)
+                transition: all 0.3s ease
+            p
+                @apply rounded p-4 flex-grow relative
+                @extend .card-bg-theme
+                margin-left: 30px

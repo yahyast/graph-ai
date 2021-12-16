@@ -1,0 +1,85 @@
+.btn-nav
+    background-position: top center
+    background-size: contain
+    background-repeat: no-repeat
+    width: 50px
+    height: 71px
+    display: block
+    margin: 0 auto 50px auto
+    &--gatra
+        background-image: url('/images/gatras.svg')
+    &--isu
+        background-image: url('/images/isus.svg')
+    &--bdi
+        background-image: url('/images/bdis--small.svg')
+    &--management
+        background-image: url('/images/topic--small.svg')
+
+    &--bdi,
+    &--management
+        background-size: 40px
+        height: 64px
+        margin-bottom: 24px
+        // background-color: red
+
+.card-menu-popup
+    background-color: var(--bg-card)
+    padding: 12px 0px
+    border-radius: 8px
+    width: 290px
+    transition: all 0.5s ease 0s
+    overflow: auto
+    z-index: 1000
+    box-shadow: 0px 4px 18px rgb(0 0 0 / 10%)
+    position: absolute
+    left: 105px
+    min-height: 290px
+    max-height: 380px
+    transform: translateX(-150%)
+    &--gatra
+        top: 94px
+    &--isu
+        top: 216px
+    &--more
+        bottom: 66px
+        min-height: unset
+    &--show
+        transform: translateX(0%)
+
+.btn-item
+    @apply flex py-3 px-4 items-center
+    
+
+.menu-item
+    @apply block my-2 mx-4
+
+.btn-item
+    .icon-bullet
+        width: 16px
+        height: 16px
+        border-radius: 100px
+        border: 1px solid 
+        position: relative
+        display: flex
+        align-items: center
+        justify-content: center
+        &::after
+            content: ''
+            position: absolute
+            width: 10px
+            height: 10px
+            border-radius: 100%
+            background-color:  transparent
+            opacity: 0
+            transition: all 0.1s
+    &:hover
+        color: var(--color-primary-500)
+        .icon-bullet
+            border-color: var(--color-primary-500)
+
+    &--selected
+        color: var(--color-primary-500)
+        .icon-bullet
+            &::after
+                opacity: 1
+                background-color: var(--color-primary-500)

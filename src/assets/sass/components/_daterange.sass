@@ -1,0 +1,100 @@
+
+.box-calendar
+    @apply flex items-center rounded px-3 py-2 border pr-4 relative
+    @extend .card-bg-theme
+    border-color: var(--color-primary-500)
+    min-width: 280px
+
+    .vue-daterange-picker
+        @apply w-full h-full inset-0 absolute
+        .form-control
+            @apply w-full h-full inset-0 absolute
+            padding-left: 48px
+            // padding-right: 12px
+            background-color: transparent
+            border: none
+            line-height: 40px
+        .reportrange-text
+            padding-top: 0px !important
+            padding-right: 0px !important
+
+    .daterangepicker
+        margin-top: 40px
+        
+        .cancelBtn.btn-secondary
+            background-color: transparent
+            color: var(--text-theme-heading)
+            &:hover
+                background-color: var(--bg-card--hover)
+        .applyBtn.btn-success
+            background-color: var(--color-primary-500)
+            border: 1px solid var(--color-primary-500)
+            color: #ffffff
+            &:hover
+                background-color: var(--color-primary-700)
+                border: 1px solid var(--color-primary-700)
+                color: var(--color-primary-500)
+
+
+    &--born
+        background-color: var(--bg-field-theme) !important
+        .monthselect,
+        .yearselect
+            background-color: var(--bg-field-theme)
+            color: var(--text-theme)
+            border: 1px solid var(--color-primary-500)
+        .vue-daterange-picker .form-control
+            line-height: 34px
+
+        .month
+            .row
+                @apply grid grid-cols-2 gap-2
+                input, select
+                    @apply w-full rounded
+
+.popup-calendar__body
+    .reportrange-text
+        @apply rounded
+        background-color: var(--bg-field-theme)
+        border-color: var(--color-primary-500)
+
+.daterangepicker
+    background-color: var(--bg-field-theme)
+    .calendar-table
+        background-color: var(--bg-field-theme)
+        border-color: var(--bg-field-theme)
+        th,
+        td
+            background-color: transparent
+            color: var(--text-theme)
+            // &:hover
+            &.in-range
+                @apply bg-blue-50
+            &.start-date, 
+            &.end-date
+                background-color: var(--color-primary-500)
+                color: #ffffff
+        .next span,
+        .prev span
+            @apply border-gray-900
+
+    .ranges li
+        &:hover
+            color: var(--text-theme)
+            background-color: var(--bg-theme)
+        &.active
+            background-color: var(--color-primary-500)
+
+    .drp-buttons
+        border-color: var(--border-theme-darkness)
+
+    &:before
+        border-bottom-color: var(--border-theme-darkness)
+    &::after
+        border-bottom-color: var(--bg-field-theme)
+    
+.vue-daterange-picker .reportrange-text
+    background-color: transparent
+
+.highcharts-axis-labels text
+    fill: var(--color-theme) !important

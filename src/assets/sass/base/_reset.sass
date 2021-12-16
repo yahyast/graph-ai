@@ -1,0 +1,235 @@
+html
+    min-height: 100%
+
+body
+    // background-color: #f0f2fc
+    font-family: 'Overpass', sans-serif !important
+    font-weight: 400
+    background-color: var(--bg-theme)
+    color: var(--text-theme)
+
+h1, h2, h3, h4, h5, h6
+    color: var(--text-theme-heading)
+
+.small-heading
+    @apply font-bold
+    letter-spacing: 0.2px
+    font-size: 16px
+
+.subheading
+    margin-bottom: 0px
+    font-size: 24px
+    font-weight: 700
+    padding-bottom: 1rem
+
+.text-paragraph
+    white-space: break-spaces
+    line-height: 24px
+    text-align: justify
+    padding-bottom: 1.5rem
+
+    *
+        color: var(--text-theme) !important
+        font-family: var(--font-base) !important
+        background-color: transparent
+        font-size: 1rem !important
+        text-align: justify !important
+
+    a
+        color: var(--text-link) !important
+        &:hover
+            text-decoration: underline !important
+
+    ul
+        list-style: disc
+        padding-left: 1.5rem
+    
+    ol
+        list-style: decimal
+        padding-left: 1.5rem
+    
+    h1, h2, h3, h4, h5, h6
+        font-weight: bold
+        line-height: 1.7
+
+    h1
+        font-size: 1.75rem !important
+        
+    h2
+        font-size: 1.50rem !important
+    h3
+        font-size: 1.25rem !important
+    h4
+        font-size: 1rem !important
+    h5
+        font-size: 0.75rem !important
+    h6
+        font-size: 0.5rem !important
+
+.h3
+    margin-bottom: 8px
+    margin-block: 0px
+    font-size: 16px
+    font-weight: 700
+
+.link
+    @apply font-bold
+    color: var(--text-link)
+    &:hover
+        @apply underline
+
+// images
+.avatar
+    width: 32px
+    height: 32px
+    border-radius: 4px
+    &--large
+        width: 128px
+        height: 128px
+
+.logo-ai
+    background-image: url('/images/GraphAI.svg')
+    background-position: center center
+    background-size: contain
+    background-repeat: no-repeat
+    width: 92px
+    height: 64px
+    margin: auto auto 47px
+    padding: 0px !important
+    display: block
+
+// scroll
+.scrollbox
+    visibility: hidden
+    transition: visibility 0.2s ease
+
+.scrollbox-container
+    transition: visibility 0.2s ease
+
+.scrollbox-container,
+.scrollbox:hover,
+.scrollbox:focus
+    visibility: visible
+
+
+::-webkit-scrollbar
+    width: 8px
+    position: fixed
+
+::-webkit-scrollbar-track
+    // background: #ecf0f5
+
+::-webkit-scrollbar-thumb
+    cursor: pointer
+    border: 2px solid transparent
+    background-clip: padding-box
+    border-radius: 9px
+    height: 30px
+    background-color: #ced1d7
+    // -webkit-box-shadow: inset -1px -1px 0 rgba(0,0,0,.05),inset 1px 1px 0 rgba(0,0,0,.05)
+    // box-shadow: inset -1px -1px 0 rgba(0,0,0,.05),inset 1px 1px 0 rgba(0,0,0,.05)
+
+.editr
+    border-color: var(--color-primary-500) !important
+    border-radius: 4px
+    overflow: hidden
+
+    &--content
+        ul
+            list-style: disc
+            padding-left: 1.5rem
+        
+        ol
+            list-style: decimal
+            padding-left: 1.5rem
+        
+        h1, h2, h3, h4, h5, h6
+            font-weight: bold
+            line-height: 1.7
+             color: var(--text-theme-heading)
+
+        h1
+            font-size: 2em
+            
+        h2
+            font-size: 1.75em
+        h3
+            font-size: 1.45em
+        h4
+            font-size: 1.25em
+        h5
+            font-size: 1em
+        h6
+            font-size: 0.85em
+        
+        *
+            color: var(--text-theme)
+        
+        a
+            color: var(--text-link)
+
+        &[contenteditable=true]:empty:before
+            content: 'Tulis disini...' !important
+            color: var(--text-theme) !important
+            opacity: 0.4
+
+    &--toolbar
+        background-color: var(--bg-card--hover) !important
+        border-bottom: 1px solid var(--border-theme-darkness) !important
+        a
+            fill: var(--text-theme) !important
+            color: var(--text-theme) !important
+
+        .dashboard
+            background-color: var(--bg-card) !important
+            border-color: var(--border-theme) !important
+            form
+                @apply flex items-center gap-4
+                label
+                    @apply flex-grow flex
+                    input
+                        @apply flex-grow ml-4
+                        border: 1px solid var(--color-primary-500) !important
+                        background-color: var(--bg-field-theme) !important
+                button
+                    background-color: var(--color-primary-500)
+                    color: #fff
+                    padding: 4px 14px
+                    border-radius: 100px
+                    
+
+.pagination
+    .vue-ads-flex
+        @apply flex items-center justify-between
+    
+    .vue-ads-flex-grow
+        @apply flex items-center gap-1
+        button
+            @apply flex items-center justify-center rounded-full w-8 h-8
+            // border-color: var(--border-theme)
+            &:hover
+                background-color: var(--bg-card--hover)
+                // color: var(--color-primary-500)
+
+            &.bg-yellow-dark
+                background-color: var(--color-primary-500)
+                color: #fff
+
+        &:disabled,
+        [disabled]
+            opacity: 0.6
+            background-color: var(--bg-theme)
+            @apply pointer-events-none
+
+        .fa
+            border-width: 6px
+            border-style: solid
+            border-color: transparent var(--text-theme) transparent transparent
+            display: block
+            position: relative
+            &.fa-angle-left
+                border-color: transparent var(--text-theme) transparent transparent
+                left: -4px
+            &.fa-angle-right
+                border-color: transparent transparent transparent var(--text-theme)
+                right: -4px

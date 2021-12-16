@@ -1,0 +1,36 @@
+.box-activity-topic-actor
+    @apply grid grid-cols-8
+    background-color: var(--bg-card)
+    &__snapshot
+        height: 70vh
+        @apply col-span-2 p-4
+        .box-account-twitter
+            @apply flex items-start p-4
+            flex: 0 0 324px
+            &__info
+                @apply items-start
+                ul
+                    @apply block
+                    li
+                        @apply flex-row items-start justify-start border-0
+                        i
+                            @apply mr-2
+    &__following
+        @apply col-span-2
+    &__tweets
+        @apply col-span-4
+        .account-tweet
+            &__header,
+            &__body
+                padding-right: 40px
+
+    .account-tweet
+        &__header
+            @apply flex items-center
+            height: 74px
+        &__body
+            height: calc( 70vh - 74px )
+            @apply overflow-auto
+        &--following
+            @apply border-l
+            border-color: var(--border-theme)
