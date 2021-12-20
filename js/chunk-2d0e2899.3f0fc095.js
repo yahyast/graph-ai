@@ -1,0 +1,2 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["chunk-2d0e2899"],{"7eb7":function(e,n,t){"use strict";t.r(n);var r=function(){var e=this,n=e.$createElement,t=e._self._c||n;return t("router-view")},u=[],a={name:"BdiOrganizationShell",data:function(){return{}},methods:{}},i=a,l=t("2877"),o=Object(l["a"])(i,r,u,!1,null,null,null);n["default"]=o.exports}}]);
+//# sourceMappingURL=chunk-2d0e2899.3f0fc095.js.map
